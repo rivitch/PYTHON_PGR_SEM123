@@ -284,12 +284,41 @@
 # # print(type("text",))
 # # print(type(g_tuple))
 
-# словарь
-a = {'one': 42, 'two': 3.14, 'ten': 'Hello world!'}
-b = dict(one=42, two=3.14, ten='Hello world!')
-c = dict([('one', 42), ('two', 3.14), ('ten', 'Hello world!')])
-print(a == b == c)
-# добавление
-my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4}
-my_dict['ten'] = 10
-print(my_dict)
+# # словарь
+# a = {'one': 42, 'two': 3.14, 'ten': 'Hello world!'}
+# b = dict(one=42, two=3.14, ten='Hello world!')
+# c = dict([('one', 42), ('two', 3.14), ('ten', 'Hello world!')])
+# print(a == b == c)
+# # добавление
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4}
+# my_dict['ten'] = 10
+# print(my_dict)
+# # Доступ к значению словаря через квадратные скобки []
+# TEN = 'ten'
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict['two'])
+# print(my_dict[TEN])
+# #print(my_dict[1]) # KeyError: 1
+# # Доступ через метод get
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict.get('two'))
+# print(my_dict.get('five'))
+# print(my_dict.get('five', 5))
+# print(my_dict.get('ten', 5))
+
+# # Метод setdefault
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# spam = my_dict.setdefault('five')
+# print(f'{spam = }\t{my_dict=}')
+# eggs = my_dict.setdefault('six', 6)
+# print(f'{eggs = }\t{my_dict=}')
+# new_spam = my_dict.setdefault('two')
+# print(f'{new_spam=}\t{my_dict=}')
+# new_eggs = my_dict.setdefault('one', 1_000)
+# print(f'{new_eggs=}\t{my_dict=}')
+
+# Метод keys возвращает объект-итератор dict_keys.
+my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+print(my_dict.keys())
+for key in my_dict.keys():
+    print(key)
