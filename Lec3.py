@@ -240,9 +240,16 @@
 # url = '/'.join(data)
 # print(url)
 
-# Методы upper, lower, title, capitalize
-text = 'однажды в СТУДЁНУЮ зИмнЮЮ ПоРУ'
-print(text.upper())  #  верхний  регистр
-print(text.lower())  #  нижний регистр
-print(text.title())  #  кАЖДОЕ СЛОВО С ЗАГЛАВНОЙ   
-print(text.capitalize()) # фраза с заглавной
+# # Методы upper, lower, title, capitalize
+# text = 'однажды в СТУДЁНУЮ зИмнЮЮ ПоРУ'
+# print(text.upper())  #  верхний  регистр
+# print(text.lower())  #  нижний регистр
+# print(text.title())  #  кАЖДОЕ СЛОВО С ЗАГЛАВНОЙ   
+# print(text.capitalize()) # фраза с заглавной
+
+# # Методы startswith и endswith. проверяет начинается ли строка с заданной подстроки. Метод возвращает истину или ложь.
+# text = 'Однажды в студёную зимнюю пору'
+# print(text.startswith('Однажды'))
+# print(text.endswith('зимнюю', 0, -5)) # могут принимать параметры start и stop
+
+# 
