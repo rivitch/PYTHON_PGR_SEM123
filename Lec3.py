@@ -244,5 +244,5 @@
 text = 'однажды в СТУДЁНУЮ зИмнЮЮ ПоРУ'
 print(text.upper())  #  верхний  регистр
 print(text.lower())  #  нижний регистр
-print(text.title())  #     
-print(text.capitalize())
+print(text.title())  #  кАЖДОЕ СЛОВО С ЗАГЛАВНОЙ   
+print(text.capitalize()) # фраза с заглавной
