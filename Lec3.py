@@ -317,8 +317,30 @@
 # new_eggs = my_dict.setdefault('one', 1_000)
 # print(f'{new_eggs=}\t{my_dict=}')
 
-# Метод keys возвращает объект-итератор dict_keys.
-my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
-print(my_dict.keys())
-for key in my_dict.keys():
-    print(key)
+# # Метод keys возвращает объект-итератор dict_keys.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict.keys())
+# for key in my_dict.keys():
+#     print(key)
+
+# # # Метод values
+# # Метод values похож на keys, но возвращает значения в виде объекта итератора dict_values, а не ключи.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict.values())
+# for value in my_dict.values():
+#     print(value)
+
+# # Метод items
+# # Если в цикле необходимо работать одновременно с ключами и значен парами,  используют метод items.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict.items())
+# for tuple_data in my_dict.items():
+#     print(tuple_data)
+# for key, value in my_dict.items():
+#     print(f'{key = } value before 100 - {100 - value}')
+
+# 
+
+
+
+#
