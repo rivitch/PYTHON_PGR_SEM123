@@ -10,4 +10,11 @@ list_1 = _inp.split()
 len_max = max(list_1, key=len)
 print(len_max)
 list_1.sort()
-print(list_1)
+# print(list_1)
+# print(len(list_1))
+# if i == len_max:
+#     print(len_max)
+for i in range(len(list_1)):
+    print(i + 1, list_1[i])
+
+    pass

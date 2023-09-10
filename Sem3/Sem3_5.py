@@ -11,11 +11,11 @@ print(my_list)
 my_list_1 = list(enumerate(my_list))
 my_list_2 = list(enumerate(my_list, start=1))
 # print(list(enumerate(my_list)))
-print(list(enumerate(my_list, start=1)))
+# print(list(enumerate(my_list, start=1)))
 for item in my_list:
     # print(item, my_list_2[item])
     if item%2 != 0:
-        print(f"число {item} нечетное : ",item%2)
+        # print(f"число {item} нечетное : ",item%2)
         count += 1
         out.append([count, item])
         # print(f"{my_list[count]}\n")
