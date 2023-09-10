@@ -5,21 +5,19 @@
 # ✔ Текст выравнивается по правому краю так, чтобы у самого длинного слова был один пробел между ним и номером строки.
 
 _inp = "Cтроку вводит пользователь текста"
-print(_inp)
+# print(_inp)
 list_1 = _inp.split()
-len_max = max(list_1, key=len)
-print(len_max, "/",list_1)
+# len_max = max(list_1, key=len)
+len_max =len(max(list_1, key=len))+1
+# print(len_max, "/",list_1)
 count = 0
 
 for i in list_1:
     count += 1
-    print(i, type(i))
-    print(len_max, type(len_max))
     if i == len_max:
-        print(f"{count} {i}") # {i + 1}," ",
+        print(f"{count}. {i : >{len_max}}") # {i + 1}," ",
     else:
-        print(f"{count}{i}")  # {len[i]}
-#print(f"{i}{list_1[i] = :> key}")  
+        print(f"{count}.{i : >{len_max}}")  # {len[i]}
 
 # # max = int(len_max)
 # print(type(len_max), len_max)
