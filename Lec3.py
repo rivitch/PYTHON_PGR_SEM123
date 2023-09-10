@@ -316,6 +316,8 @@
 # print(f'{new_spam=}\t{my_dict=}')
 # new_eggs = my_dict.setdefault('one', 1_000)
 # print(f'{new_eggs=}\t{my_dict=}')
+# # new_eggs = my_dict.setdefault(7, 1_000)
+# # print(f'{new_eggs=}\t{my_dict=}')
 
 # # Метод keys возвращает объект-итератор dict_keys.
 # my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
@@ -332,6 +334,9 @@
 
 # # Метод items
 # # Если в цикле необходимо работать одновременно с ключами и значен парами,  используют метод items.
+# # Метод возвращает объект итератор dict_items. Если создать цикл for с одной
+# # переменной между for и in, получим кортеж из пар элементов — ключа и значения.
+# # Две переменные в цикле: первая принимает ключ, а вторая значение.
 # my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
 # print(my_dict.items())
 # for tuple_data in my_dict.items():
@@ -339,8 +344,149 @@
 # for key, value in my_dict.items():
 #     print(f'{key = } value before 100 - {100 - value}')
 
-# 
+# # Метод popitem
+# # Для удаления пары ключ значение из словаря используют метод popitem.
+# # Так как словари сохраняют порядок добавления ключей, удаление происходит
+# # справа налево, по методу LIFO. Элементы удаляются в обратном добавлению порядке.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# spam = my_dict.popitem()
+# print(f'{spam = }\t{my_dict=}')
+# eggs = my_dict.popitem()
+# print(f'{eggs = }\t{my_dict=}')
 
+# # Метод pop
+# # Метод pop удаляет пару ключ-значение по переданному ключу.
+# # Если указать несуществующий ключ, получим ошибку KeyError. 
+# # В отличии от метода pop у списков list, dict.pop вызовет ошибку TypeError. 
+# # Для удаление последнего элемента нужен метод popitem.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# spam = my_dict.pop('two')
+# print(f'{spam = }\t{my_dict=}')
+# err = my_dict.pop('six') # KeyError: 'six'
+# err = my_dict.pop() # TypeError: pop expected at least 1 argument, got 0
 
+# # Метод update
+# # Для расширение словаря новыми значениями используют метод update.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# my_dict.update(dict(six=6))
+# print(my_dict)
+# my_dict.update(dict([('five', 5), ('two', 42)]))
+# print(my_dict)
+# # На вход метод получает другой словарь в любой из вариаций создания словаря.
+# # Если передать существующий ключ, значение будет заменено новым.
+# # Ещё один способ создать словари из нескольких других, который появился в новой версии Python — вертикальная черта.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# # new_dict = my_dict | {'five': 5, 'two': 42} | dict(six=6)  # в   3.8.10   "|"  не работает
+# print(new_dict)
+# # При перезаписи совпадающих ключей приоритет отдаётся словарю, расположенному правее.
 
-#
+# # Задание
+# # Перед вами словарь и несколько строк кода. Напишите что вернёт каждая из строк.
+# # Попробуйте справится с заданием без запуска кода. У вас 3 минуты.
+# my_dict = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'ten': 10}
+# print(my_dict.setdefault('ten', 555))
+# print(my_dict.values())
+# print(my_dict.pop('one'))
+# my_dict['one'] = my_dict['four']
+# print(my_dict)
+
+# # Множество — набор уникальных неиндексированных элементов. В Python есть два вида множеств: set —
+# # изменяемое множество, frozenset — неизменяемое множество. Неизменяемое множество позволяет вычислять хеш и 
+# # может использоваться там, где разрешён лишь хешированный тип данных, например в качестве ключа словаря.
+# my_set = {1, 2, 3, 4, 2, 5, 6, 7}
+# print(my_set)
+# my_f_set = frozenset((1, 2, 3, 4, 2, 5, 6, 7,))
+# print(my_f_set)
+# # not_set = {1, 2, 3, 4, 2, 5, 6, 7, ['a', 'b']} # TypeError: unhashable type: 'list'
+
+# # Метод add
+# # Метод add работает аналогично методу списка append, т.е. добавляет один элемент в коллекцию.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# my_set.add(9)
+# print(my_set)
+# my_set.add(7)
+# print(my_set)
+# # my_set.add(9, 10) # TypeError: set.add() takes exactly one argument (2 given)
+# my_set.add((9, 10))
+# print(my_set)
+# # my_set.add(("9", "10"))
+# # print(my_set)
+# # my_set.add(("a", "b"))
+# # print(my_set)
+# # a=b=None
+# # my_set.add((a, b))
+# # print(my_set)
+
+# # Метод  remove Для удаления элемента множества.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# my_set.remove(5)
+# print(my_set)
+# my_set.remove(10) # KeyError: 10 # При передаче несуществующего объекта получим ошибку KeyError.
+
+# # Метод  discard
+# # Метод discard работает аналогично remove—удаляет один элемент множества.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# my_set.discard(5)
+# print(my_set)
+# my_set.discard(10)  # В отличии от remove при попытке удалить несуществующий элемент discard не вызывает ошибку. При этом множество не изменяется.
+
+# # Метод  intersection
+# # Для получения пересечения множеств, т.е. множества с элементами, которые есть и в левом и в правам множестве используют метод intersection
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# other_set = {1, 4, 42, 314}
+# new_set = my_set.intersection(other_set)
+# print(f'{my_set = }\n{other_set = }\n{new_set = }')
+# # версия 3.8.10  позволяет получить пересечение множеств в следующей записи c использованием символа &
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# other_set = {1, 4, 42, 314}
+# new_set = my_set & other_set
+# print(f'{my_set = }\n{other_set = }\n{new_set = }')
+
+# # Метод  union Для объединения множеств.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# other_set = {1, 4, 42, 314}
+# new_set = my_set.union(other_set)
+# print(f'{my_set = }\n{other_set = }\n{new_set = }')
+# new_set_2 = my_set | other_set
+# print(f'{my_set = }\n{other_set = }\n{new_set_2 = }')
+# # На выходе получаем множество уникальных элементов из левого и правого множеств. Более короткая запись объединения возможна при помощи вертикальной черты. работает в 3.8.10
+
+# # Метод  difference удаляет из левого множества элементы правого.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# other_set = {1, 4, 42, 314}
+# new_set = my_set.difference(other_set)
+# print(f'{my_set = }\n{other_set = }\n{new_set = }')
+# new_set_2 = my_set - other_set
+# print(f'{my_set = }\n{other_set = }\n{new_set_2 = }')
+# # На выходе получаем множество элементов встречающихся только в левом множестве. Более короткая запись возможно при помощи знака минус. Вычитаем из левого элементы правого
+
+# # Проверка на вхождение, in
+# # Для проверки входит ли элемент в множество используют зарезервированное слово in.
+# my_set = {3, 4, 2, 5, 6, 1, 7}
+# print(42 in my_set)
+# # Внимание! Слово in позволяет сделать проверку на вхождение и в других
+# # коллекциях. Входит ли объект в list, tuple, является ли подстрока частью строки
+# # str, встречается ли ключ в словаре. Для list, tuple, str проверка на вхождение
+# # работает за линейное время O(n). Для dict, set, frozenset проверка работает за
+# # константное время O(1)
+
+# #Задание
+# # Перед вами множество и несколько строк кода. Напишите что вернёт каждая из
+# # строк. Попробуйте справится с заданием без запуска кода. У вас 3 минуты.
+# my_set = frozenset({3, 4, 1, 2, 5, 6, 1, 7, 2, 7})
+# print(len(my_set))  # 7
+# print(my_set - {1, 2, 3})  # 4,5,6,7
+# print(my_set.union({2, 4, 6, 8})) # 1,2,4,5,6,7,8  - (3)
+# print(my_set & {2, 4, 6, 8}) # 2,4,6
+# print(my_set.discard(10)) # 1,2,3,4,5,6,7  - (AttributeError: 'frozenset' object has no attribute 'discard')
+
+# Классы bytes и bytearray
+text_en = 'Hello world!'
+res = text_en.encode('utf-8')
+print(res, type(res))
+text_ru = 'Привет, мир!'
+res = text_ru.encode('utf-8')
+print(res, type(res))
+x = bytes(b'\xd0\x9f\xd1\x80\xd0\xb8')
+y = bytearray(b'\xd0\x9f\xd1\x80\xd0\xb8')
+print(f'{x = }\n{y = }')
