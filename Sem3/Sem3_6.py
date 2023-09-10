@@ -19,6 +19,12 @@ for i in list_1:
     else:
         print(f"{count}.{i : >{len_max}}")  # {len[i]}
 
+# через enumerate()
+list_1.sort()
+for spam, eggs in enumerate(list_1, 1):
+    print(f"{spam}.{eggs : >{len_max}}")
+    # pass
+
 # # max = int(len_max)
 # print(type(len_max), len_max)
 # #x = int(len(len_max))
