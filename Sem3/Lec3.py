@@ -480,13 +480,13 @@
 # print(my_set & {2, 4, 6, 8}) # 2,4,6
 # print(my_set.discard(10)) # 1,2,3,4,5,6,7  - (AttributeError: 'frozenset' object has no attribute 'discard')
 
-# Классы bytes и bytearray
-text_en = 'Hello world!'
-res = text_en.encode('utf-8')
-print(res, type(res))
-text_ru = 'Привет, мир!'
-res = text_ru.encode('utf-8')
-print(res, type(res))
-x = bytes(b'\xd0\x9f\xd1\x80\xd0\xb8')
-y = bytearray(b'\xd0\x9f\xd1\x80\xd0\xb8')
-print(f'{x = }\n{y = }')
+# # Классы bytes и bytearray
+# text_en = 'Hello world!'
+# res = text_en.encode('utf-8')
+# print(res, type(res))
+# text_ru = 'Привет, мир!'
+# res = text_ru.encode('utf-8')
+# print(res, type(res))
+# x = bytes(b'\xd0\x9f\xd1\x80\xd0\xb8')
+# y = bytearray(b'\xd0\x9f\xd1\x80\xd0\xb8')
+# print(f'{x = }\n{y = }')
