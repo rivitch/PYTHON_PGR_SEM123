@@ -13,11 +13,15 @@
 #         number.append(i)
 # print(f"{number}\n{number_rnd}")
 
-# Ввод списка вручную
-number = list(map(int, input("Введите список чисел, разделенных пробелом: ").split()))
-number_inp = []
-for i in number:    
-    if i not in number_inp:
-        number_inp.append(i)
-print(f"{number}\n{number_inp}")
+# # Ввод списка вручную (длинное решение)
+# number = list(map(int, input("Введите список чисел, разделенных пробелом: ").split()))
+# number_inp = []
+# for i in number:    
+#     if i not in number_inp:
+#         number_inp.append(i)
+# print(f"{number}\n{number_inp}")  # список не сортируется
 
+# Ввод списка вручную (короткое решение через множество)
+# number = list(map(int, input("Введите список чисел, разделенных пробелом: ").split()))
+print(number := list(map(int, input("Введите список чисел, разделенных пробелом: ").split()))) # ввод через маржовый оператор
+print(list(set(number)))  # список сортируется
