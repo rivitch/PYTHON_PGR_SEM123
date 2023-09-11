@@ -4,24 +4,24 @@
 # ✔ Результат сохраните в словаре, где ключ символ, а значение — частота встречи символа в строке. 
 # ✔ Обратите внимание на порядок ключей. Объясните почему они совпадают или не совпадают в ваших решениях.
 
-#_inp = "Cтроку вводит пользователь текста"
-my_list = "Cтроку вводит пользователь текста"
-# sort_list = sorted(my_list)
-# print(sort_list)
-print(x := sorted(my_list))
-# print(x := _inp.sorted())
-# print(len(_inp))
+from pprint import pp
+my_list = "Cтрока, которую вводит пользователь текста."
+print(my_list)        
+my_list = sorted(my_list) # Выводится сортированный словарь
 out = dict()
-for i in x:
-    if i in out:
-        out[i].append(i)
-        print(f"символ {i} добавился ")
-    else:
-        out[i] = [i]
-        print(f"добавился новый ключ {i}")
-    print(f"{out}")
-    pass
-# #print(num := _inp.count("т"))
-#print(f"{out}")
-print(out[" "], len(out[" "]))
+res = dict()
+for i in my_list:
+    if i != ("."):# or i != (",") or i != (" "):
+        if i != (" "):
+            if i != (","):
+                if i in out:
+                    out[i].append(i)
+                    #print(f"символ {i} добавился ")
+                else:
+                    out[i] = [i]
+                    #print(f"добавился новый ключ {i}")
+                z = len(out[i])
+                res[i]= [z]
+pp(res)
+
 
