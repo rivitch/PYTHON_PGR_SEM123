@@ -5,11 +5,8 @@
 
 _str1 = "Напишите функцию, которая принимает строку текста."
 def F4_2(data: str):
-    #list_1 = data.split()
     my_list = sorted(data)
     set_list = sorted(list(set(my_list)),reverse=True)
-    #len_max =len(max(list_1, key=len))
-    #list_1.sort()
     for spam, eggs in enumerate(set_list, 0):
         print(f"{ord(eggs)} - {eggs}")
 F4_2(_str1)
