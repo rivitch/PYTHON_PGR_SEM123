@@ -10,18 +10,28 @@ print(my_list)
 my_list = sorted(my_list) # Выводится сортированный словарь
 out = dict()
 res = dict()
+# без метода count
+# for i in my_list:
+#     if i != ("."):# or i != (",") or i != (" "):
+#         if i != (" "):
+#             if i != (","):
+#                 if i in out:
+#                     out[i].append(i)
+#                     #print(f"символ {i} добавился ")
+#                 else:
+#                     out[i] = [i]
+#                     #print(f"добавился новый ключ {i}")
+#                 z = len(out[i])
+#                 res[i]= [z]
+# pp(res)
+# метод count (выводятся знаки препинания и пробелы)
 for i in my_list:
-    if i != ("."):# or i != (",") or i != (" "):
-        if i != (" "):
-            if i != (","):
-                if i in out:
-                    out[i].append(i)
-                    #print(f"символ {i} добавился ")
-                else:
-                    out[i] = [i]
-                    #print(f"добавился новый ключ {i}")
-                z = len(out[i])
-                res[i]= [z]
+    res[i] = my_list.count(i)
 pp(res)
 
-
+# # семинарское 1 (выводятся знаки препинания и пробелы)
+# my_dict = {}
+# for item in my_list:
+#     my_dict[item] = my_dict.get(item, 0) + 1
+#     pass
+# pp(my_dict)
