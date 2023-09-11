@@ -15,9 +15,13 @@ out = dict()
 for i in x:
     if i in out:
         out[i].append(i)
+        print(f"символ {i} добавился ")
     else:
         out[i] = [i]
-    #print(f"{out}")
+        print(f"добавился новый ключ {i}")
+    print(f"{out}")
     pass
 # #print(num := _inp.count("т"))
+#print(f"{out}")
+print(out[" "], len(out[" "]))
 
