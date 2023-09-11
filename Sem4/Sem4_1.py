@@ -26,6 +26,7 @@ def _1(data: str):
     for spam, eggs in enumerate(list_1, 1):
         print(f"{spam}. {eggs :>{len_max}}")
 # print(_1(_str1)) # None?
+#print("sem")
 _1(_str1)
   
    

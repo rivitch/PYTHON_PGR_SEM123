@@ -84,13 +84,13 @@
 # # my_list.remove(3) # ValueError: list.remove(x): x not in list
 # # print(my_list)
 
-# Функция sorted принимает на вход любую коллекцию по которой можно итерироваться и всегда возвращает отсортированный СПИСОК.
-print("\nФункция sorted")
-my_list = [4, 8, 2, 9, 1, 7, 2]
-sort_list = sorted(my_list)
-print(my_list, sort_list, sep='\n')
-rev_list = sorted(my_list, reverse=True) # True - сортировка по убыванию.
-print(my_list, rev_list, sep='\n')
+# # Функция sorted принимает на вход любую коллекцию по которой можно итерироваться и всегда возвращает отсортированный СПИСОК.
+# print("\nФункция sorted")
+# my_list = [4, 8, 2, 9, 1, 7, 2]
+# sort_list = sorted(my_list)
+# print(my_list, sort_list, sep='\n')
+# rev_list = sorted(my_list, reverse=True) # True - сортировка по убыванию.
+# print(my_list, rev_list, sep='\n')
 
 # # Метод sort осуществляет сортировку элементов списка без создания копии, память не тратим
 # print("\nМетод sort")
