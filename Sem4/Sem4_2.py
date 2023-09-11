@@ -7,11 +7,21 @@ _str1 = "Напишите функцию, которая принимает ст
 def F4_2(data: str):
     my_list = sorted(data)
     set_list = sorted(list(set(my_list)),reverse=True)
-    for spam, eggs in enumerate(set_list, 0):
-        print(f"{ord(eggs)} - {eggs}")
-F4_2(_str1)
+    res = []
+    for i in set_list: 
+        res.append([ord(i),i])
+    # for spam, eggs in enumerate(set_list, 0):
+    #     print(f"{ord(eggs)} - {eggs}")
+    return res
+print(F4_2(_str1))
+#print(type(F4_2(_str1)))
 
 
+# ---
+# семинарское
+#print([ord(i) for i in sorted(list(set(_str1)))])
+print([ord(i) for i in sorted(list(set(_str1)), reverse= True)]) # по убыванию
+# ---------
 # my_list = sorted(_str1)
 # #set_list = {}
 # # set_list = set(my_list)
