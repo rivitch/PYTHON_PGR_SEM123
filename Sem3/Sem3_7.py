@@ -24,10 +24,13 @@ res = dict()
 #                 z = len(out[i])
 #                 res[i]= [z]
 # pp(res)
+
 # метод count (выводятся знаки препинания и пробелы)
 for i in my_list:
     res[i] = my_list.count(i)
 pp(res)
+
+#----
 
 # # семинарское 1 (выводятся знаки препинания и пробелы)
 # my_dict = {}

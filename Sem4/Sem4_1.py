@@ -17,12 +17,15 @@ def _1():
 _1()   
     #pass
 
-# _str1 = "Напишите функцию, которая принимает строку текста."
-# def _1(data: str):
-#     list_1 = data.split()
-#     len_max =len(max(list_1, key=len))
-#     list_1.sort()
-#     for spam, eggs in enumerate(list_1, 1):
-#         print(f"{spam}. {eggs :>{len_max}}")
-# print(_1(_str1)) # None?  
+# Семинарское 1
+_str1 = "Напишите функцию, которая принимает строку текста."
+def _1(data: str):
+    list_1 = data.split()
+    len_max =len(max(list_1, key=len))
+    list_1.sort()
+    for spam, eggs in enumerate(list_1, 1):
+        print(f"{spam}. {eggs :>{len_max}}")
+# print(_1(_str1)) # None?
+_1(_str1)
+  
    
