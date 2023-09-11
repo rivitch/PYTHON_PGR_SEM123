@@ -11,7 +11,7 @@ def F4_3(data: str):
     for i in range(len(list_1)):
         list_1[i] = int(list_1[i])
     list_1.sort()
-    dict_1 = {i: chr(i) for i in range(list_1[0],(list_1[1]+1))}
+    dict_1 = {chr(i): i for i in range(list_1[0],(list_1[1]+1))}
     return dict_1
 pp(F4_3(_str1))
 #--- 
@@ -19,5 +19,11 @@ pp(F4_3(_str1))
 
 
 
-# #------
-# # семинарское
+# # #------
+# # # семинарское (не работает)
+# def f4_3(_str: str):# -> dict:
+#     res = sorted([int(i) for i in _str.split()])
+#     # return {chr[i]: i for i in range(res[0], res[1] + 1)}
+#     return {chr[i]: i for i in range(min(res), max(res) + 1)}
+#     #pass
+# print(f4_3("35 55"))
