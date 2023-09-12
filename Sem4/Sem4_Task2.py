@@ -13,13 +13,18 @@
 a = 1
 b = 2
 x = id(a)
-b = id{b}
+y = id(b)
+print(a,b,x,y)
 _dict1 = {}
 def F_my(**kwargs):
-    for key, value in kwargs.items():
-        #_dict1.append(value: key)
+    for value, key in kwargs.items():
         _dict1.update(kwargs.items())
-        print(_dict1)
     return _dict1
     pass
-print(F_my(_valKwargs))
+print(F_my(a=x,b=y))
+#--
+# def F_my(**kwargs):
+#     for value, key in kwargs.items():
+#         _dict1.update(kwargs.items())
+#     return _dict1
+#     pass

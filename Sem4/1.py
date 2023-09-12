@@ -37,3 +37,6 @@ pp(_matr3)
 #----
 
 
+#print(f"{F_my(a}={x,b}={y}))")
+#print(F_my(a=x,b=y))
+#   for value, key in kwargs.items():
