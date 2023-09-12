@@ -18,15 +18,17 @@ y = id(b)
 print(a,b,x,y)
 _dict1 = {}
 _dict2 = {}
+_lst1 =[]
 #def F_my(**kwargs):
 def F_my(**kwargs):  
     for key, value in kwargs.items():
         _dict1.update(kwargs.items())
-    #_dict2(reversed(item) for item in _dict1.items()) 
+    #_dict2(reversed(item) for item in _dict1.items())
+    _lst1 = list(_dict1) 
     _dict2 = _dict1
-    return _dict1
+    return #_dict1
     pass
-print(_dict2)
+print(_lst1)
 #print(list(F_my(a=x,b=y)))
 print(F_my(a=x,b=y))
 #--
