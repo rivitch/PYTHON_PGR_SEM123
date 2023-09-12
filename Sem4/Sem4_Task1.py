@@ -10,7 +10,8 @@ def Fmap(data):
 
 Fmap(_matrix)
 res = deepcopy(_matrix)
-#from pprint import pp # не сработало
+# from pprint import pp # не сработало
+# pp(_matrix)
 # pp(f"{_matrix[0]")
 
 def Fmatrix(data:list):
