@@ -11,19 +11,19 @@ my_list = sorted(my_list) # Выводится сортированный сло
 out = dict()
 res = dict()
 # без метода count
-# for i in my_list:
-#     if i != ("."):# or i != (",") or i != (" "):
-#         if i != (" "):
-#             if i != (","):
-#                 if i in out:
-#                     out[i].append(i)
-#                     #print(f"символ {i} добавился ")
-#                 else:
-#                     out[i] = [i]
-#                     #print(f"добавился новый ключ {i}")
-#                 z = len(out[i])
-#                 res[i]= [z]
-# pp(res)
+for i in my_list:
+    if i != ("."):# or i != (",") or i != (" "):
+        if i != (" "):
+            if i != (","):
+                if i in out:
+                    out[i].append(i)
+                    #print(f"символ {i} добавился ")
+                else:
+                    out[i] = [i]
+                    #print(f"добавился новый ключ {i}")
+                z = len(out[i])
+                res[i]= [z]
+pp(res)
 
 # метод count (выводятся знаки препинания и пробелы)
 for i in my_list:
