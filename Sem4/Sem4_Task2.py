@@ -5,43 +5,12 @@
 # переданного аргумента, а значение — имя аргумента. Если 
 # ключ не хешируем, используйте его строковое представление.
 
-# from random import randint
-# from pprint import pp
-# _tuple = (1, 2, 3)
-# _list = 
-#_valKwargs = [1=12,3=35,2=1,5=15,4=0]
-#_dict1(reversed(item) for item in _dict1.items())
-a = 1
-b = 2
-x = id(a)
-y = id(b)
-print(a,b,x,y)
-_dict1 = {}
-_dict2 = {}
-_lst1 =[]
-#def F_my(**kwargs):
-def F_my(**kwargs):  
+def F_inverse(**kwargs) -> dict:
+    new_dict = {}
     for key, value in kwargs.items():
-        _dict1.update(kwargs.items())
-    #_dict2(reversed(item) for item in _dict1.items())
-    _lst1 = list(_dict1) 
-    _dict2 = _dict1
-    return #_dict1
-    pass
-print(_lst1)
-#print(list(F_my(a=x,b=y)))
-print(F_my(a=x,b=y))
-#--
-# a = 1
-# b = 2
-# x = id(a)
-# y = id(b)
-# print(a,b,x,y)
-# _dict1 = {}
-# def F_my(**kwargs):
-#     for value, key in kwargs.items():
-#         _dict1.update(kwargs.items())
-#     return _dict1
-#     pass
-# print(F_my(a=x,b=y))
-# #--
+        try:
+            new_dict[value] = key
+        except:
+            new_dict[str(value)] = key       
+    return new_dict       
+print(F_inverse(a=7, b="qwe", c=3.14))
