@@ -4,14 +4,18 @@
 # из википедии или из документации к языку
 
 from pprint import pp
-_list1 = ["Qwerte kkl 87bv qwerte jtk kkl btj fsts mny ljj, hre kkl."]
-res = []
-print(len(_list1[0])) 
+#_inp1 = 'file.txt'
+_inp1 = "Qwerte kkl 87bv qwerte jtk kkl btj fsts mny ljj, hre kkl."
+_inp2 = _inp1.lower()
+symbols_to_remove = ",!?."
+for symbol in symbols_to_remove:
+    _inp2 = _inp2.replace(symbol, "")
+_list1 = _inp2.split() # досюда работает
 print(_list1)
+print(_list1.count("qwerte"))
+res = []
 for i in _list1:
-    for j in range(len(_list1)):
-        # res[j] = _list1.count(i)
-        # print(i, j)
-        pass
-    pass    
-print(res)
+    if _list1.count(i) >1:
+        res.append(i)
+        res = list(set(res))
+print("1", res)

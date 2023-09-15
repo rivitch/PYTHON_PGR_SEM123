@@ -8,6 +8,7 @@ from pprint import pp
 my_list = "Cтрока, которую вводит пользователь текста."
 print(my_list)        
 my_list = sorted(my_list) # Выводится сортированный словарь
+print(my_list) 
 out = dict()
 res = dict()
 # без метода count
