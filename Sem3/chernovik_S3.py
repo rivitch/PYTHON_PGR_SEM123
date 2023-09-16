@@ -30,15 +30,20 @@ _list1 = _inp2.split()
 print(_list1)
 #print(_list1.count("qwerte"))
 res = []
+#for key, value in enumerate(_list1.count(value)):
 for i in _list1:
-    if [[_list1.count(i)],[i]] not in res:
-        res.append([_list1.count(i),i])
-    print(res)
+    for key, value in enumerate(_list1.count(i),1):
+        print(key, value)
+
+    # if [[_list1.count(i)],[i]] not in res:
+    #     res.append([_list1.count(i),i])
+    #print(res)
     # if _list1.count(i) >9:
     #     res.append(i)
     #res = list(set(res))
 
-print("-----------",res)
+print("\n-----------",res)
+print(res[0][1])
 
 
 #---------
