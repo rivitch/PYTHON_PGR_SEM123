@@ -5,7 +5,7 @@
 def  bis_sextus(year) -> bool:   # проверка на високосный год
     #day,month,year,*_ = input("введите дату в формате DD.MM.YYYY: ").split('.')
     x = int(year)
-    print(x)
+    print(f'{x} год н.э.')
     if x<0 or x>10000: 
     #if int(year)<_START_YEAR or int(year)>_END_YEAR:   #_START_YEAR>int(year)>_END_YEAR:
         print("ошибка!") 
