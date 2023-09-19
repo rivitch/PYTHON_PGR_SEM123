@@ -68,3 +68,99 @@
 
 # ---------------------------------------------------
 
+# # Плохой import * (импорт звёздочка)  (11:20)
+# # from имя_модуля import *
+
+# # super_module.py
+
+# from sys import randint
+
+# SIZE = 100
+# _secret = 'qwer'             # 1 подчеркивание впереди переменной - защищенная переменная
+# __top_secret = 'qwerty123'   # 2 подчеркивания впереди переменной - приватная переменная
+
+# def func(a: int, b: int) -> str:
+#     z = f'В диапазоне от {a} до {b} получили {randint(a, b)}'
+#     return z
+
+# result = func(1, 6)
+
+# # task_import_06.py
+
+# from super_module import *
+
+# SIZE = 49.5
+# print(f'{SIZE = }\n{result = }')
+# print(f'{z = }')
+# print(f'{_secret = }')
+# print(f'{func(100, 200) = }\n{randint(10, 20) = }')
+
+# def func(a: int, b: int) -> int:
+#     return a + b
+
+
+# print(f'{func(100, 200) = }')
+
+# # # Вывод
+# # Traceback (most recent call last):
+# #   File "i:/GB/TASKS/PYTHON_PGR_SEM123/Sem6/task_import_06.py", line 1, in <module>
+# #     from super_module import *
+# #   File "i:\GB\TASKS\PYTHON_PGR_SEM123\Sem6\super_module.py", line 1, in <module>
+# #     from sys import randint
+# # ImportError: cannot import name 'randint' from 'sys' (unknown location)
+
+# ---------------------------------------
+
+# # Файл base_math.py
+# """Four basic mathematical operations.
+# Addition, subtraction, multiplication and division as functions.
+# """
+# _START_SUM = 0
+# _START_MULT = 1
+# _BEGINNING = 0
+# _CONTINUATION = 1
+
+# def add(*args):
+#     res = _START_SUM
+#     for item in args:
+#         res += item
+#     return res
+
+# def sub(*args):
+#     res = args[_BEGINNING]
+#     for item in args[_CONTINUATION:]:
+#         res -= item
+#     return res
+
+# def mul(*args):
+#     res = _START_MULT
+#     for item in args:
+#         res *= item
+#     return res
+
+# def div(*args):
+#     res = args[_BEGINNING]
+#     for item in args[_CONTINUATION:]:
+#         res /= item
+#     return res
+
+# print(f'{add(2, 4) = }')
+# print(f'{add(2, 4, 6, 8) = }')
+# print(f'{sub(10, 2) = }')
+# print(f'{mul(2, 2, 2, 2, 2) = }')
+# print(f'{div(-100, 5, -2) = }')
+
+# ----------------------------
+# (34:00)
+# # импорт модуля other_module в другой модуль того же пакета можно осуществить
+# через относительный импорт:
+# from . import other_module
+# А если модулю надо выйти из своего пакета в пакет верхнего уровня, используют
+# вторую точку:
+# from .. import other_module
+# Или так
+# from ..other_package import other_module
+
+# ----
+
+
