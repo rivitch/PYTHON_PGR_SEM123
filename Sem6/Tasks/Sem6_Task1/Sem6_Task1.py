@@ -1,24 +1,16 @@
 
 
 from mods.test import bis_sextus
+from mods.test_data import f_test_data
 
 
-
-day,month,year,*_ = input("введите дату в формате DD.MM.YYYY: ").split('.')
-
-
-# def  bis_sextus(year):   # проверка на високосный год
-#     print(int(year))
-#     if 0<int(year)>10000:
-#         print("ошибка!") 
-#     elif int(year)%4 == 0 and int(year)%400 == 0:
-#         print("год високосный!")
-#     else:
-#         print("год не високосный!")
+print(f_test_data())
+#day,month,year,*_ = input("введите дату в формате DD.MM.YYYY: ").split('.')
 
 
 def t():
     pass        
 
 
-print(bis_sextus(year))
+#print(bis_sextus())
+#print(bis_sextus(year))

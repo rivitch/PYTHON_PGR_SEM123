@@ -2,7 +2,7 @@
 Инициирующий пакетный файлфайл
 """
 
-__all__= ['bis_sextus']  #,'_END_YEAR','_LIST_MONTH')
+__all__= ['bis_sextus','test_data']  #,'_END_YEAR','_LIST_MONTH')
 
 # _START_YEAR = 0
 # _END_YEAR =10000
