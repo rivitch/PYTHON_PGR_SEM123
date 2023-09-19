@@ -8,11 +8,14 @@ def  bis_sextus(year) -> bool:   # проверка на високосный г
     if x<0 or x>10000: 
     #if int(year)<_START_YEAR or int(year)>_END_YEAR:   #_START_YEAR>int(year)>_END_YEAR:
         print("ошибка!") 
-    elif x%4 == 0 and int(year)%400 == 0:
+        return
+    elif x%4 == 0 and x%400 == 0:
         print("год високосный!")
+        return True
     else:
         print("год не високосный!")
-    return    
+        return False
+       
 
 # #_LIST_MONTH = [[1,31],[2,28],[3,31],[4,30],[5,31],[6,30],[7,31],[8,31],[9,30],[10,31],[11,30,[12,31]]]
 

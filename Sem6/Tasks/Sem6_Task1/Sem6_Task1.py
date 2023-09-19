@@ -2,6 +2,8 @@
 
 from mods.test import bis_sextus
 
+
+
 day,month,year,*_ = input("введите дату в формате DD.MM.YYYY: ").split('.')
 
 
@@ -19,4 +21,4 @@ def t():
     pass        
 
 
-bis_sextus(year)
+print(bis_sextus(year))
