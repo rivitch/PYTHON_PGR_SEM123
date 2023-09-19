@@ -27,13 +27,17 @@ _list2 = ",!?."
 for i in _list2:
     _inp2 = _inp2.replace(i, "")
 _list1 = _inp2.split() 
-print(_list1)
+#print(_list1)
 #print(_list1.count("qwerte"))
+
 res = []
+# for i in _list1:
+#     res.append([_list1.count(i),i])
+#     print(max(res()))
 #for key, value in enumerate(_list1.count(value)):
-for i in _list1:
-    for key, value in enumerate(_list1.count(i),1):
-        print(key, value)
+# for i in _list1:
+#     for key, value in enumerate(_list1.count(i),1):
+#         print(key, value)
 
     # if [[_list1.count(i)],[i]] not in res:
     #     res.append([_list1.count(i),i])
@@ -42,8 +46,8 @@ for i in _list1:
     #     res.append(i)
     #res = list(set(res))
 
-print("\n-----------",res)
-print(res[0][1])
+# print("\n-----------",res)
+# print(res[0][1])
 
 
 #---------
