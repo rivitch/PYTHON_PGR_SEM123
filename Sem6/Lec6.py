@@ -2,6 +2,8 @@
 # Модули
 
 # import sys, _abc,  math  # импорт модуля в проект
+# import math                # по PEP8 каждый модуль прописывается в отдельной строке  
+# import_abc
 # # пустая строка
 # print(sys, _abc)
 # print(sys.builtin_module_names)    #список встроенных модулей
@@ -40,3 +42,29 @@
 # print(random.randint(1, 6))  # при запуске получаем "Что-то тут не так"
 # # выход - добавление к имени совпадающего с именем модуля символа "_"
 # --------------------------------
+
+# # Использование from и as
+
+# from sys import builtin_module_names, path
+
+# print(builtin_module_names)
+# print(*path, sep = '\n')
+# #---
+# import random  as rnd
+# from sys import builtin_module_names  as bmn, path as p
+
+# print(bmn)
+# print(*p, sep = '\n')
+# print(rnd.randint(1, 6))
+# print(builtin_module_names, '\n')
+# print(*path, '\n')
+# print(path, '\n')       
+# print(sys.path)
+# #  Вывод
+# Traceback (most recent call last):
+#   File "i:/GB/TASKS/PYTHON_PGR_SEM123/Sem6/Lec6.py", line 62, in <module>
+#     print(sys.path)
+# NameError: name 'sys' is not defined
+
+# ---------------------------------------------------
+
