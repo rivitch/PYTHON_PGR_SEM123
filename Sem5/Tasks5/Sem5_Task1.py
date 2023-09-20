@@ -10,6 +10,7 @@ list_q = [2]
 _CONST = 10
 n=3
 while len(list)!= N:
+    pass
     
 
 
