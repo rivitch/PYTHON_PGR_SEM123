@@ -4,7 +4,7 @@
 # ✔ Напишите преобразование в одну строку. 
 
 text_1 = 'Hello, world!'
-dict_1 = {sm: ord(sm) for sm in text_1}
+dict_1 = {smb: ord(smb) for smb in text_1}
 print(dict_1)
 
 
