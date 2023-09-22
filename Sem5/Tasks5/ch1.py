@@ -9,19 +9,28 @@ def func(a, b, c):
     print(min(b), max(b))
     # c = 0
     # b = []
-    print(a, b, c)
-    while c != len(b):
-        print(c , len(b))
-        for i in range(min(b), max(b)):
+    #b_1 = 
+    print(type(a), type(b), type(c))
+    for i in range(min(b), max(b)):
             print(i)
             if a%int(i) != 0:
 
-                b.append(str[a])
+                b.append(a)
                 print(b)
                 a += 1
-                print(a)
-            # # else:
-            # #     a += 1
+                print(a)    
+    # while c != len(b):
+    #     #print(c , len(b))
+    #     for i in range(min(b), max(b)):
+    #         print(i)
+    #         if a%int(i) != 0:
+
+    #             b.append(str[a])
+    #             print(b)
+    #             a += 1
+    #             print(a)
+    #         # # else:
+    #         # #     a += 1
 
 
 

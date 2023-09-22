@@ -5,7 +5,12 @@
 
 text_1 = 'Hello, world!'
 dict_1 = {smb: ord(smb) for smb in text_1}
+dict_2 =({smb: ord(smb)} for smb in text_1)
 print(dict_1)
+print(type(dict_1))
+print(dict_2)
+print(*dict_2)
+print(type(dict_2))
 
 
 #-----------------------------
