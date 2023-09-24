@@ -3,7 +3,6 @@ from random import randint
 
 res= False
 def chess_module(chessboard):
-    pass
 
 
 list_row = []
@@ -25,7 +24,6 @@ if (len(set(list_col))) == (len(list_col)): # проверка вертикал�
     res= True
 for i in list_row:   # проверка диагоналей
     for j in list_col:
-        #print(abs(list_row[i+1] - list_row[i])) 
         #print(abs(list_row[i+1] - list_row[i])) 
         print(i,j)
         #print(list_row[i])
