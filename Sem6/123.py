@@ -22,8 +22,14 @@ def chess_module(chessboard):
     for i in list_row:   # проверка диагоналей
         for j in list_col:
             #print(abs(list_row[i+1] - list_row[i])) 
-            print(i,j)
+            #print(i,j)
             #print(list_row[i])
             if abs(i - j) != abs((i+1) - (j+1)):
                 res= True  
+
+    return res
+if res == True:
+    x,y = ()
+    pass
+
         #ass  

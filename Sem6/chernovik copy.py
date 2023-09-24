@@ -3,6 +3,7 @@ from random import randint
 
 res= False
 def chess_module(chessboard):
+    pass
 
 
 list_row = []
