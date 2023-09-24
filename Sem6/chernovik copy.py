@@ -29,7 +29,7 @@ for i in list_row:   # проверка диагоналей
         #print(abs(list_row[i+1] - list_row[i])) 
         print(i,j)
         #print(list_row[i])
-        if abs(i - j) != abs((i+1) - j):
+        if abs(i - j) != abs((i+1) - (j+1)):
             res= True  
     #ass  
 # print(list_row)
