@@ -1,9 +1,9 @@
 from random import randint
-
-res= False
-def chess_module(chessboard):
-    list_row = []
-    list_col = []
+list_row = []
+list_col = []
+#res= False
+def chess_module():
+    res= False
     #row = randint(1,8)
     for i in range (1,9):       # случайный расклад горизонталь
         row = (randint(1,8))
@@ -26,10 +26,12 @@ def chess_module(chessboard):
             #print(list_row[i])
             if abs(i - j) != abs((i+1) - (j+1)):
                 res= True  
+    if res == True:
+        return res
+print(chess_module())
+# if res == True:
 
-    return res
-if res == True:
-    x,y = ()
-    pass
+#     #x,y = (list_row, list_col)
+#     pass
 
-        #ass  
+#         #ass  
