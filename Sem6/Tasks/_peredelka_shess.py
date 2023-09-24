@@ -4,16 +4,16 @@ list_col = []
 res= False
 def chess_module():
     res= False
-    
-    list_row = (randint(1,8) for i in range (1,9))
-    # for i in range (1,9):       # случайный расклад горизонталь
-    #     row = (randint(1,8))
-    #     list_row.append(randint(1,8))
+
+    #list_row = (randint(1,8) for i in range (1,9))
+    for i in range (1,9):       # случайный расклад горизонталь
+        row = (randint(1,8))
+        list_row.append(randint(1,8))
     print(list_row) 
-    list_col = (randint(1,8) for i in range (1,9))  
-    # for i in range (1,9):       # случайный расклад вертикаль
-    #     col = (randint(1,8))
-    #     list_col.append(col)
+    #list_col = (randint(1,8) for i in range (1,9))  
+    for i in range (1,9):       # случайный расклад вертикаль
+        col = (randint(1,8))
+        list_col.append(col)
     print(list_col) 
     if (len(set(list_row))) == (len(list_row)): # проврпка горизонтали (одинаковых нет)
         print('ферзи по горизонтали не бьют друг друга')
@@ -30,7 +30,7 @@ def chess_module():
                 res= True  
     if res == True:
         return res
-#print(chess_module())
+print(chess_module())
 # if res == True:
 
 #     #x,y = (list_row, list_col)
