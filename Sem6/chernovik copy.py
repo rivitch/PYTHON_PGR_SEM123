@@ -12,13 +12,15 @@ while res==False:
     count +=1 
     print(f'Работаю. Вариантов проверено - {count}')
     #row = randint(1,8)
-    for i in range (1,9):       # случайный расклад горизонталь
-        list_row.append(randint(1,8))
-        #yield list_row
-    #print(list_row) 
-    for i in range (1,9):       # случайный расклад вертикаль
-        list_col.append(randint(1,8))
-    #print(list_col) 
+    list_row = (randint(1,8) for i in range (1,9))
+    # for i in range (1,9):       # случайный расклад горизонталь
+    #     list_row.append(randint(1,8))
+    #     #yield list_row
+    print(list_row)   # вытаскивать через next
+    list_col = (randint(1,8) for i in range (1,9))   
+    # for i in range (1,9):       # случайный расклад вертикаль
+    #     list_col.append(randint(1,8))
+    print(list_col) 
     if (len(set(list_row))) == (len(list_row)): # проврпка горизонтали (одинаковых нет)
         print('ферзи по горизонтали не бьют друг друга')
         res= True
