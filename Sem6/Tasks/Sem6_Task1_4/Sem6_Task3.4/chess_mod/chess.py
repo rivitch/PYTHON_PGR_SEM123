@@ -1,4 +1,6 @@
-
+"""
+Файл проверки
+"""
 from random import randint
  
 
