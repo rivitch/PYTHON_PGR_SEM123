@@ -8,6 +8,7 @@
 import os
 # from random import randint
 from file_mod.f_renm import rnm, crt
+import shutil
 
 end_name = input("желаемое конечное имя файлов : ")
 num = input("количество цифр в порядковом номере : ")
@@ -18,6 +19,6 @@ x,y,*_ = input("диапазон сохраняемого оригинально
 
 directory = os.getcwd()  # Получаем текущий рабочий каталог
 print(directory)
-#crt() # работает
+crt() # работает
 rnm(end_name, num, a, b, x, y) 
 
