@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 
 # В Python для получения доступа файлу используют функцию open().
 # open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
@@ -10,10 +11,22 @@
 
 #f = open('Sem7/2file_sem7.txt')
 #f = open('1file_sem7.txt')
-f = open('2file_sem7.txt', 'r', encoding='utf-8')
+f = open('Sem7/2file_sem7.txt', 'r', encoding='utf-8')
 print(f)
 print(list(f))
+f.close()
 #f = open('file_sem7.txt')
 f = open('file.txt', 'r', encoding='utf-8')
 print(f)
 print(list(f))
+f.close()
+
+# f = open('Sem7/2file_sem7.txt', 'a', encoding='utf-8')
+# f.write('\nОкончание файла')
+# f.close()
+
+with open('text_data.txt', 'w+', encoding='utf-8') as f:
+    print(list(f))
+    print(f.write('Пока'))
+print(list(f))
+#print(f.write('Пока')) # ValueError: I/O operation on closed file.
