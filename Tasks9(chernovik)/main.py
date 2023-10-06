@@ -36,6 +36,7 @@ def m_file_read(): # работает
     with open('new9.csv', 'r', newline='', encoding='utf-8') as f_read:
         csv_file = csv.reader(f_read)
         for line in csv_file:
+            #print(type(line))
             #m_cwadro(a,b,c)
             #print(line, line[0])  #type(line), 
             a = int(line[0])
@@ -50,7 +51,13 @@ def m_file_read(): # работает
                 x1=float(-b/(2*a))
                 print(x1)
             else:
-                print('нет решений')
+                x3 = 'нет решений'
+                print(x3)
+            f_write = open('new9a.csv', 'a', newline='', encoding='utf-8')
+            #with open('new9a.csv', 'a', newline='', encoding='utf-8') as f_write:
+            csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
+            line_1 = (a,b,c,x1,x2,x3)
+            csv_write.writerow(line_1)        
     # with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
     #     csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
     #     line = (a,b,c)
