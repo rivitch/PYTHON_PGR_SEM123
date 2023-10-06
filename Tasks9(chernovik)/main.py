@@ -5,7 +5,8 @@ import csv
 from typing import Callable
 import json
 
-
+list_one = []
+list_two = []
 # def m_cwadro(a,b,c):        # квадратное уравнение  #a, b, c  # работает
 #     d = (b**2)-(4*a*c)
 #     if d>0 :
@@ -42,30 +43,41 @@ def m_file_read(): # работает
             a = int(line[0])
             b = int(line[1])
             c = int(line[2])
+            list_one.append((a,b,c))
             d = (b**2)-(4*a*c)
             if d>0 :
                 x1=float((-b+ sqrt(d))/(2*a))
                 x2=float((-b- sqrt(d))/(2*a))
-                x3 = None
+                x3 = "None"
                 print(x1, x2)
             elif d ==0:
                 x1=float(-b/(2*a))
-                x2, x3 = None
+                x2 = x3 = "None"
                 print(x1)
             else:
                 x3 = 'нет решений'
-                x2 = x1 = None
+                x2 = x1 = "None"
                 print(x3)
-            f_write = open('new9a.json', 'a', newline='', encoding='utf-8')
+            list_two.append((x1,x2,x3))
+        line_1 = dict(zip(list_one, list_two))
+        print(line_1)
+        f_write = open('new9a.json', 'a', newline='', encoding='utf-8')
             #with open('new9a.csv', 'a', newline='', encoding='utf-8') as f_write:
             #csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
-            line_1 = (a,b,c,x1,x2,x3)
-            json.dump(line_1, f_write, ensure_ascii=False)
+            
+            #line_1 = (a,b,c,x1,x2,x3)
+        json.dump(f'{line_1}', f_write, ensure_ascii=False)
             #close(f_write)  
             #csv_write.writerow(line_1) 
-    #with open(file_name, 'a', encoding='utf-8') as f:  
+    #with open('new9a.json', 'r', encoding='utf-8') as f:  
+    with open('new9a.json', 'r', encoding='utf-8') as f:
+        json_file = json.load(f)
+        print(f'{type(json_file) = }\n{json_file = }')
+        # print(f'{json_file["name"] = }')
+        # print(f'{json_file["address"]["geo"] = }')
+        # print(f'{json_file["email"] = }')  
         #json.dump('\nОкончание файла', f, ensure_ascii=False)               
-    # with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
+    #   with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
     #     csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
     #     line = (a,b,c)
     #     csv_write.writerow(line)                
