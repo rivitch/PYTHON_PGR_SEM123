@@ -1,0 +1,1 @@
+('I:\\GB\\TASKS\\PYTHON_PGR_SEM123\\Tasks8', ['mod8'], ['123.py', 'main8.py'])('I:\\GB\\TASKS\\PYTHON_PGR_SEM123\\Tasks8\\mod8', [], ['func.py', '__init__.py'])
