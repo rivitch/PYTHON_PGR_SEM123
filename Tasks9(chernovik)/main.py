@@ -21,15 +21,16 @@ list_two = []
 #     return 
 
 def m_file_create():    # работает
-    for i in range(1, 11):
-        a = randint(1,11)
-        b = randint(1,11)
-        c = randint(1,11)
+    for i in range(1, 15):
+        a = randint(-10,10)
+        b = randint(-10,10)
+        c = randint(-10,10)
+        if a!=0:
         #m_cwadro(a,b,c)
-        with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
-            csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
-            line = (a,b,c)
-            csv_write.writerow(line)    
+            with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
+                csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
+                line = (a,b,c)
+                csv_write.writerow(line)    
     #return csv_write
 
 def m_file_read(): # работает
@@ -67,11 +68,13 @@ def m_file_read(): # работает
             
             #line_1 = (a,b,c,x1,x2,x3)
         json.dump(f'{line_1}', f_write, ensure_ascii=False)
-            #close(f_write)  
+    #close(f_write)  
             #csv_write.writerow(line_1) 
     #with open('new9a.json', 'r', encoding='utf-8') as f:  
     with open('new9a.json', 'r', encoding='utf-8') as f:
+        
         json_file = json.load(f)
+        #print(json_file.txt)
         print(f'{type(json_file) = }\n{json_file = }')
         # print(f'{json_file["name"] = }')
         # print(f'{json_file["address"]["geo"] = }')
