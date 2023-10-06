@@ -46,18 +46,25 @@ def m_file_read(): # работает
             if d>0 :
                 x1=float((-b+ sqrt(d))/(2*a))
                 x2=float((-b- sqrt(d))/(2*a))
+                x3 = None
                 print(x1, x2)
             elif d ==0:
                 x1=float(-b/(2*a))
+                x2, x3 = None
                 print(x1)
             else:
                 x3 = 'нет решений'
+                x2 = x1 = None
                 print(x3)
-            f_write = open('new9a.csv', 'a', newline='', encoding='utf-8')
+            f_write = open('new9a.json', 'a', newline='', encoding='utf-8')
             #with open('new9a.csv', 'a', newline='', encoding='utf-8') as f_write:
-            csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
+            #csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
             line_1 = (a,b,c,x1,x2,x3)
-            csv_write.writerow(line_1)        
+            json.dump(line_1, f_write, ensure_ascii=False)
+            #close(f_write)  
+            #csv_write.writerow(line_1) 
+    #with open(file_name, 'a', encoding='utf-8') as f:  
+        #json.dump('\nОкончание файла', f, ensure_ascii=False)               
     # with open('new9.csv', 'a', newline='', encoding='utf-8') as f_write:
     #     csv_write = csv.writer(f_write, dialect='excel-tab', delimiter=',',quoting=csv.QUOTE_MINIMAL)
     #     line = (a,b,c)
