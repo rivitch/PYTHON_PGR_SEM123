@@ -106,42 +106,45 @@ class Animal:
         self.name = name
         self.age = age
         self.spec = spec
-    def get_spec(self):
-        return self.spec
+    # def get_spec(self):
+    #     return self.spec
     #pass
     pass
 
 class Dog(Animal):
-    def __init__(self, name, age, spec):
-        super().__init__(name, age, spec)
+    def __init__(self,  *args, **kwargs):
+        super().__init__( *args, **kwargs)
         self.spec = spec
+    # def dog1(self):
+    #     x_dog = dog1()
+    #     print(f'1. {x_dog}')
+
 
 class Cat(Animal):
     def __init__(self, name, age, spec):
-        super().__init__(name, age)
+        super().__init__(name, age, spec)
         self.spec = spec
 
 class Fish(Animal):
     def __init__(self, name, age, spec):
-        super().__init__(name, age)
-        self.spec = spec
-        
-class Factory(Dog, Cat, Fish):
-    def __init__(self, name, age, spec):
         super().__init__(name, age, spec)
         self.spec = spec
-        name, age, spec, *_ = input().split()
-        a = Animal(name, age, spec)
-        return a
-    pass      
+        
+# class Factory(Dog, Cat, Fish):
+#     def __init__(self, name, age, spec):
+#         super().__init__(name, age, spec)
+#         self.spec = spec
+#         name, age, spec, *_ = input().split()
+#         a = Animal(name, age, spec)
+#         return a
+#     pass      
+
+name, age, spec, *_ = input().split()
+a = Animal(name, age, spec)
+#print(a)
+
 
 # name, age, spec, *_ = input().split()
-# a = Animal(name, age, spec)
-# family, first_name, second_name, age, *_ = input().split()
-# a = InfoMan(family, first_name, second_name, age)
-# #b = InfoMan(age)
-#print(f'Полное имя {a.full_name()}\nЧерез год будет {a.birthday()}\nТекущий возраст {a.__init__.self._age}')
-#print(f'Полное имя {a.Dog()}')
-# print(f'Через год будет {a.birthday()}')
-# print(f'Текущий возраст {a.show_age()}')
-# print(f'Текущий возраст {a._InfoMan__age}')
+# a = Fish(name, age, spec)
+# print(a)
+
