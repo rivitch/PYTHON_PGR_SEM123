@@ -4,7 +4,10 @@
 
 from random import randint
 
-list_animal = []
+list_animal = ['Fish', 'Tiger', "Eagle"]
+for key, value in enumerate(list_animal):
+    print(key, value)
+    pass
 
 class AnimalFactory:
     def create_animal(self, animal_type, **kwargs):
@@ -30,7 +33,11 @@ class Eagle:
         pass
 
 factory = AnimalFactory()
-animal = factory.create_animal("Cat", name="Whiskers", age=3)
+animal = factory.create_animal("Tiger", name="Whiskers", age=3)
+# y = map(str, animal)
+# print(y)
+for pet in animal.__str__:#list(animal):
+    print(pet)
 
 #==========================
 # class Animal:
