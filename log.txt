@@ -1,0 +1,13 @@
+INFO:root:Name: config, Extension: .py, Is Directory: False, Parent Directory: logging
+INFO:root:Name: handlers, Extension: .py, Is Directory: False, Parent Directory: logging
+INFO:root:Name: __init__, Extension: .py, Is Directory: False, Parent Directory: logging
+INFO:root:Name: __pycache__, Extension: , Is Directory: True, Parent Directory: logging
+INFO:root:Name: config.cpython-38.opt-1, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: config.cpython-38.opt-2, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: config.cpython-38, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: handlers.cpython-38.opt-1, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: handlers.cpython-38.opt-2, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: handlers.cpython-38, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: __init__.cpython-38.opt-1, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: __init__.cpython-38.opt-2, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__
+INFO:root:Name: __init__.cpython-38, Extension: .pyc, Is Directory: False, Parent Directory: __pycache__

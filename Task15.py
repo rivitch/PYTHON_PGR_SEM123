@@ -44,3 +44,4 @@ directory_path = input("Введите путь до директории: ")
 print_directory(directory_path)
 
 # python I:\GB\TASKS\PYTHON_PGR_SEM123\Sem15\Task15.py
+# I:\GB\PROGRAMMS\Python38\Lib\logging
