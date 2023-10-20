@@ -1,7 +1,9 @@
 # PYTHON_PGR_SEM123
-задачи семинара 2 в https://github.com/rivitch/PYTHON-PGR_SEM-2.git
+Семинар 15
 
-на всякий перекопировал в папку Sem2
+Файл Task15.py
 
-задачи семинара 4 в папке Sem4, Sem4_Task1.py, Sem4_Task2.py   
-qwer
+Проверка cmd в VSC 1.78.2
+
+Win7, Python 3.8.10
+
