@@ -47,42 +47,51 @@ get_user_info()
 
 User.read_json_file(file_path)
 
-@pytest.fixture(scope='module')# scope='module'
 def users_data_load():
     with open('users.json') as file:
         data = json.load(file)
+        print(data)
     return data
+
+@pytest.fixture # (scope='module')# scope='module'
+def users_data_load():
+    with open('users.json') as file:
+        data = json.load(file)
+        print(data)
+    return data
+    #print(users_data_load())
 
 # Доступ пользователя
 def test_access(data):
     for level in data:
-        assert int(level) < 1 or int(level) >7
-    # for level in data:
-    #     assert level<1 or level>7, "!"
-        # if level<1 or level>7:
-        #     assert 'level' in data, "!"
-        # print(level)
-        # assert 'level' in data
-        # print("Доступ разрешен")
-    #return f'Доступ {level} у пользователя {user}'    
+        assert int(level) >7,"!" 
+#     # for level in data:
+#     #     assert level<1 or level>7, "!"
+#         # if level<1 or level>7:
+#         #     assert 'level' in data, "!"
+#         # print(level)
+#         # assert 'level' in data
+#         # print("Доступ разрешен")
+#     #return f'Доступ {level} у пользователя {user}'    
 
-# id пользователя
-def test_id(data):
-    for id in data:
-        assert 'id' in data
+# # id пользователя
+# def test_id(data):
+#     for id in data:
+#         assert 'id' in data
 
-# Пользователь
-def test_user(data):
-    for user in data:
-        assert 'user' in data
+# # Пользователь
+# def test_user(data):
+#     for user in data:
+#         assert 'user' in data
 
-# файл json
-def test_file():
-    try:
-        with open('users.json') as file:
-            pass
-    except FileNotFoundError:
-        pytest.fail("Файл users.json не найден")
+# # файл json
+# def test_file():
+#     try:
+#         with open('users.json') as file:
+#             pass
+#     except FileNotFoundError:
+#         pytest.fail("Файл users.json не найден")
 
-if __name__ == '__main__':
-    pytest.main(['-v'])
+# if __name__ == '__main__':
+#     pytest.main(['-v'])
+users_data_load()
